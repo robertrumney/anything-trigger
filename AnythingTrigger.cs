@@ -19,7 +19,7 @@ public class AnythingTrigger : MonoBehaviour
     public UnityEvent onTriggerEnterEvent;
 
     // Keeps track of whether the trigger has already activated
-    private bool once = false;
+    private bool triggered = false;
 
     // Called when a collider enters the trigger area
     private void OnTriggerEnter(Collider other)
@@ -27,7 +27,7 @@ public class AnythingTrigger : MonoBehaviour
         // If onlyTriggerOnce is true and the trigger has already activated, exit the function
         if(onlyTriggerOnce)
         {
-            if (once) return;
+            if (triggered) return;
         }
 
         // If the collider has the seekingTag, trigger the onTriggerEnterEvent
@@ -41,11 +41,8 @@ public class AnythingTrigger : MonoBehaviour
                 Destroy(gameObject, timeToDestroy);
             }
 
-            // If onlyTriggerOnce is true, set once to true to prevent the trigger from activating again
-            if (onlyTriggerOnce)
-            {
-                once = true;
-            }
+            // Mark the trigger as having fired at least once
+            triggered = true;        
         }
     }
 }
