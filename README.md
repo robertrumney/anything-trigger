@@ -1,6 +1,6 @@
 # Anything Trigger
 
-`AnythingTrigger` is a C# script for Unity that defines an event trigger for colliders that can be configured in the editor without code to trigger any type of action. The script provides several customizable options, including the tag that the collider must have to trigger the event, whether the game object should be destroyed when the trigger activates, and how long to wait before destroying the game object. The script also provides an option to only trigger the event once.
+`AnythingTrigger` is a C# script for Unity that defines an event trigger for colliders that can be configured in the editor inspector without code to trigger any type of action. The script provides several customizable options, including the tag that the collider must have to trigger the event, whether the game object should be destroyed when the trigger activates, and how long to wait before destroying the game object. The script also provides an option to only trigger the event once.
 
 ## Installation
 
